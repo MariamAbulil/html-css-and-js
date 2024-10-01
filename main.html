@@ -29,10 +29,11 @@
 
             <div class="nav hide">
                 <p> <a href="#head">HOEM</a></p>
-                <p > <a href="#bookDiv">sliding menu</a></p>
-                <p ><a href="#foodDiv">Different bt localStorage & sessionStorage</a></p>
-                <p ><a href="#elecDiv">href example</a></p>
-                <p ><a href="#gamesDiv">pikachu</a></p>
+                <p> <a href="#bookDiv">sliding menu</a></p>
+                <p><a href="#foodDiv">Different bt localStorage & sessionStorage</a></p>
+                <p><a href="#elecDiv">href example</a></p>
+                <p><a href="#gamesDiv">pikachu</a></p>
+                <p><a href="#cookiesDiv">cookies</a></p>
             </div>
 
         </div>
@@ -94,19 +95,19 @@
             <div id="red" onclick="getColo('red')"></div>
             <div id="blue" onclick="getColo('blue')"></div>
             <div id="green" onclick="getColo('green')"></div>
-            <div id="black"onclick="getColo('black')"></div>
+            <div id="black" onclick="getColo('black')"></div>
         </div>
         <br>
         <br>
         <div>
             <h3>To make the text value still exist even after the page loads</h3>
             <input type="text" id="txt" placeholder="Enter your name">
-            
+
         </div>
 
     </div>
 
-    
+
     <div id="elecDiv" style="margin: 500px;">
         <h1 style="text-align: center;"> HREF examples</h1>
         <div class="menu" style='background-color:red;'>
@@ -120,7 +121,26 @@
         <button onclick="fetchData()">fetch pokemon </button><br><br>
         <img src="" alt="pikachu sprite" style="display: none;" id="pikachuSprite">
     </div>
+    <form id="form">
+        <h3>Cookies In JavaScript</h3>
+        <br><br>
+        <label for="name">Enter Name</label>
+        <input id="name" type="text" name="name">
+        <br><br>
+        <label for="email">Enter Email</label>
+        <input id="email" type="email" name="email">
+        <br><br>
 
+        <select id="BackColor" onchange="SetThemeCookies()">
+            <option value="Select Theme">Select Theme</option>
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+        </select>
+
+        <button type="button" onclick="GetCookies()">Get Cookies</button>
+        <button type="button" onclick="SetCookies()">Set Cookies</button>
+        <br><br>
+    </form>
 
     <script src="main.js"></script>
 </body>

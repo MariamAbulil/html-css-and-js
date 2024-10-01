@@ -131,9 +131,47 @@
   txt.onkeyup=()=>{
       sessionStorage.setItem('txt',txt.value);
   }
-  document.cookie = "color=red; expires=Wed, 02 Oct 2024 13:43:41 GMT;";
+ /*  
+ 
+ document.cookie = "color=red; expires=Wed, 02 Oct 2024 13:43:41 GMT;";
   //to delete it : 1-delete the value // 2-put date in past  
   document.cookie = "color=red; expires=Wed, 02 Feb 2024 13:43:41 GMT;";
   //with path to access ot from this path
   document.cookie = "color=red; expires=Wed, 10 Oct 2024 13:43:41 GMT; path=/";
   console.log(document.cookie);
+
+
+ */ window.onload = function() {
+  const form = document.getElementById('form');
+  if (document.cookie.length !== 0) {
+      let cookies = document.cookie.split('; ');
+
+      for (let i = 0; i < cookies.length; i++) {
+          let cookiePair = cookies[i].split('=');
+          if (cookiePair[0] === 'colorBackground') {
+              form.style.backgroundColor = cookiePair[1];
+              break;
+          }
+      }
+  }
+}
+
+function SetThemeCookies() {
+  const BackColor = document.getElementById('BackColor').value;
+  const form = document.getElementById('form');
+  if (BackColor !== 'Select Theme') {
+      form.style.backgroundColor = BackColor;
+      document.cookie = `colorBackground=${BackColor}; expires=Wed, 10 Oct 2024 13:43:41 GMT; path=/;`;
+  }
+}
+
+function SetCookies() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  document.cookie = `name=${name}; expires=Wed, 10 Oct 2024 13:43:41 GMT; path=/;`;
+  document.cookie = `email=${email}; expires=Wed, 10 Oct 2024 13:43:41 GMT; path=/;`;
+}
+
+function GetCookies() {
+  alert(document.cookie); 
+}
