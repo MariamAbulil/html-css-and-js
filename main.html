@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        .color {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;" id="head">Welcome ... </h1>
+    <div class="cover">
+        <div class="fixed">
+            <button id="open" style="padding: 10px; background-color: bisque;"><i class="fa-solid fa-bars" id="open"
+                    style="padding: 10px; background-color: bisque;"></i></button>
+            <button id="close" class="hide" style="padding: 10px; background-color: bisque;"><i
+                    class="fa-solid fa-arrow-left" style="padding: 10px; background-color: bisque;"></i></button>
+
+            <div class="nav hide">
+                <p> <a href="#head">HOEM</a></p>
+                <p > <a href="#bookDiv">sliding menu</a></p>
+                <p ><a href="#foodDiv">Different bt localStorage & sessionStorage</a></p>
+                <p ><a href="#elecDiv">href example</a></p>
+                <p ><a href="#gamesDiv">pikachu</a></p>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="main">
+                <a href="#1"><img src="img/games.jpg" alt="book" name="main"></a>
+            </div>
+            <div class="img">
+                <div class="card">
+                    <img src="img/book.jpg" alt="book" onclick="main.src=this.src" name="book">
+                    <p>BOOK</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/food.jpg" alt="food" onclick="main.src=this.src" name="food">
+                    <p>FOOD</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/elec.jpg" alt="book" onclick="main.src=this.src" name="elec">
+                    <p>Electonic</p>
+                </div>
+                <div class="card">
+                    <img src="img/games.jpg" alt="book" onclick="main.src=this.src" name="games">
+
+                    <p>GAMS</p>
+                </div>
+
+            </div>
+            <button id="btn1">^</button>
+            <button id="btn2">
+                << /button>
+        </div>
+    </div>
+    <div id="bookDiv" style="margin: 500px;">
+        <h1 style="text-align: center;"> sliding menu</h1>
+        <div>
+            <h3 id="p11">click me</h3>
+            <ul class="hide ul1">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ipsum tempore quo voluptate
+                    obcaecati cupiditate quia, quae nostrum amet eveniet dolorem officia laudantium illum adipisci eum
+                    sequi culpa debitis ex?
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="foodDiv" style="margin: 500px;">
+        <h1 style="text-align: center;">Different bt localStorage & sessionStorage</h1>
+        <br>
+        <br>
+        <div class="colorDiv">
+            <h1>mariam</h1>
+            <div id="red" onclick="getColo('red')"></div>
+            <div id="blue" onclick="getColo('blue')"></div>
+            <div id="green" onclick="getColo('green')"></div>
+            <div id="black"onclick="getColo('black')"></div>
+        </div>
+        <br>
+        <br>
+        <div>
+            <h3>To make the text value still exist even after the page loads</h3>
+            <input type="text" id="txt" placeholder="Enter your name">
+            
+        </div>
+
+    </div>
+
+    
+    <div id="elecDiv" style="margin: 500px;">
+        <h1 style="text-align: center;"> HREF examples</h1>
+        <div class="menu" style='background-color:red;'>
+            <a href="#"> link1</a>
+            <a href="#">link2</a>
+        </div>
+    </div>
+    <div id="gamesDiv" style="margin: 500px;">
+        <h1 style="text-align: center;"> There are alot of pikachu here ,find your need!</h1>
+        <input type="text" placeholder="Name of pikachu" id="pikachuName">
+        <button onclick="fetchData()">fetch pokemon </button><br><br>
+        <img src="" alt="pikachu sprite" style="display: none;" id="pikachuSprite">
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
